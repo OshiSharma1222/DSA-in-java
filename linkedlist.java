@@ -28,6 +28,8 @@ public class linkedlist{
         twenty.setNext(null);
         head = insertatfront(head, 5);
         printlinkedlist(head);
+        head = deleteAtfront(head);
+        printlinkedlist(head);
     }
     public static void printlinkedlist(Node head){
         Node curr = head;
@@ -45,6 +47,12 @@ public class linkedlist{
             else{
                 nn.setNext(head);
                 head = nn;
+            }
+            return head;
+        }
+        public static Node deleteAtfront(Node head){
+            if(head!=null){
+                head = head.getNext();
             }
             return head;
         }
