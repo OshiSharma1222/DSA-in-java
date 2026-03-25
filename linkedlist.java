@@ -26,6 +26,7 @@ public class linkedlist{
         Node head = ten;
         ten.setNext(twenty);
         twenty.setNext(null);
+        head = insertatfront(head, 5);
         printlinkedlist(head);
     }
     public static void printlinkedlist(Node head){
@@ -34,5 +35,17 @@ public class linkedlist{
             System.out.println(curr.getData());
             curr = curr.getNext();
         }
+        }
+        public static Node insertatfront(Node head, int data){
+            Node nn = new Node(data);
+            nn.setNext(null);
+            if(head==null){
+                head = nn;
+            }
+            else{
+                nn.setNext(head);
+                head = nn;
+            }
+            return head;
         }
     }
