@@ -55,5 +55,6 @@ public class linkedlist{
                 head = head.getNext();
             }
             return head;
+            
         }
     }
