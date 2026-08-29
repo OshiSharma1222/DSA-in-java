@@ -13,7 +13,7 @@ class Solution {
             }
             chars[index++] = curr;
             if (count > 1) {
-                String st = Integer.toString(count);//
+                String st = Integer.toString(count);//convert count to string 
                 for (char ch : st.toCharArray()) {
                     chars[index++] = ch;
                 }
